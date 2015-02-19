@@ -4,7 +4,6 @@
 
 #ignore output and parse directories
 /profile/out/
-/profile/parse/
 
 #ignore tomita cache
 /profile/tomita/*.html
