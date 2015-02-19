@@ -1,0 +1,27 @@
+encoding "utf8";
+
+TTextMinerConfig {
+  Dictionary = "dic.gzt";
+
+  PrettyOutput = "debug.html";
+
+  Input = {
+    //File = "test.txt";
+    Type = no;
+    //dpl - document per line,
+    //no  - all text - one document.
+  }
+
+  Articles = [
+    { Name = "CosmoFact" }
+  ]
+
+  Facts = [
+    { Name = "Fact"}
+  ]
+
+  Output = {
+    //File   = "facts.txt";
+    Format = text;
+  }
+}

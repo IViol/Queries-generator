@@ -1,0 +1,11 @@
+#ignore python cache
+/*/*.pyc
+/*/*cache__/
+
+#ignore output and parse directories
+/profile/out/
+/profile/parse/
+
+#ignore tomita cache
+/profile/tomita/*.html
+/profile/tomita/*.bin

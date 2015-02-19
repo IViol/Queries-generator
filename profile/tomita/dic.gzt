@@ -1,0 +1,22 @@
+encoding "utf8";
+
+import "base.proto";     
+import "articles_base.proto";
+import "kwtypes_my.proto";
+
+import "facttypes.proto";
+
+TAuxDicArticle "CosmoFact"
+{
+    key = { "tomita:cosmo.cxx" type=CUSTOM }
+}
+
+fact "Факт"
+{
+    key = "инопланетяне" | "человечество" | "вселенная" | "цивилизация" | "млечный путь";
+}
+
+number "числа"
+{
+    key = { "alg:number" type=CUSTOM }
+}
