@@ -48,7 +48,7 @@ class TomitaParser(object):
   def parse(self, text):
     """Parses of the tomita's output"""
     for line in text:
-      if 'fact' in line:
+      if 'fact' in line or 'object' in line:
         length = len(line)
         pos = line.find('=') + 2
 

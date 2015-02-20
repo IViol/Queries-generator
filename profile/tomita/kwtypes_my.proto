@@ -1,4 +1,5 @@
 import "base.proto";     
 import "articles_base.proto";
 
-message fact : TAuxDicArticle {}
+message fact   : TAuxDicArticle {}
+message object   : TAuxDicArticle {}
