@@ -5,3 +5,8 @@ message Fact: NFactType.TFact
 {
     required string fact = 1;
 }
+
+message Object: NFactType.TFact 
+{
+    required string object = 1;
+}
