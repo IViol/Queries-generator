@@ -3,3 +3,4 @@ import "articles_base.proto";
 
 message fact   : TAuxDicArticle {}
 message object   : TAuxDicArticle {}
+message intellect_discovery   : TAuxDicArticle {}

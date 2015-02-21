@@ -10,3 +10,8 @@ message Object: NFactType.TFact
 {
     required string object = 1;
 }
+
+message IntellectD: NFactType.TFact 
+{
+    required string intellect_discovery = 1;
+}

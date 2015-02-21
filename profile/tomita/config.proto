@@ -19,6 +19,7 @@ TTextMinerConfig {
   Facts = [
     { Name = "Fact"}
     { Name = "Object"}
+    { Name = "IntellectD"}
   ]
 
   Output = {
