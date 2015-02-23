@@ -1,17 +1,27 @@
 import "base.proto";
 import "facttypes_base.proto";
 
-message Fact: NFactType.TFact 
+message SomeFact: NFactType.TFact 
 {
-    required string fact = 1;
+    required string some_fact = 1;
 }
 
-message Object: NFactType.TFact 
+message ObjectFact: NFactType.TFact 
 {
-    required string object = 1;
+    required string space_object = 1;
 }
 
-message IntellectD: NFactType.TFact 
+message IntellectFact: NFactType.TFact 
 {
-    required string intellect_discovery = 1;
+    required string intellectual_discovery = 1;
+}
+
+message HumanFact: NFactType.TFact 
+{
+    required string space_human = 1;
+}
+
+message DateFact: NFactType.TFact 
+{
+    required string date = 1;
 }

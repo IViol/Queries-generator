@@ -20,7 +20,7 @@ class TomitaParser(object):
       for line in f:
         input_text += line
 
-    input_text = sub(r'[^а-я\w\d\sё.]', ' ', input_text)
+    input_text = sub(r'[^а-я\w\d\sё.?!]', ' ', input_text)
     input_text = sub(r'[\s\s+]', ' ', input_text)
     input_text = sub(' +', ' ', input_text)
 
@@ -41,6 +41,7 @@ class TomitaParser(object):
       raise Exception('Extracting from file "%s" was failed' % self.filename)
     
     text = out.split('\n')
+    #print(out)
     self.parse(text)
     
     logging.info('Extracting from file "%s" was successfully' % self.filename)
@@ -48,7 +49,7 @@ class TomitaParser(object):
   def parse(self, text):
     """Parses of the tomita's output"""
     for line in text:
-      if 'fact' in line or 'object' in line:
+      if '=' in line:
         length = len(line)
         pos = line.find('=') + 2
 

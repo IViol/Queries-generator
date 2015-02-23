@@ -1,6 +1,9 @@
 import "base.proto";     
 import "articles_base.proto";
 
-message fact   : TAuxDicArticle {}
-message object   : TAuxDicArticle {}
-message intellect_discovery   : TAuxDicArticle {}
+message month : TAuxDicArticle {}
+message earth : TAuxDicArticle {}
+message some_fact : TAuxDicArticle {}
+message space_human : TAuxDicArticle {}
+message space_object : TAuxDicArticle {}
+message intellectual_discovery : TAuxDicArticle {}
