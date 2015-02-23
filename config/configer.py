@@ -51,10 +51,17 @@ class Configer(object):
 
   def check_tomita_binary(self):
     """Checks tomitaparser executable"""
-    if not isfile(self.get_tomita_path()):
-      raise FileNotFoundError(
-        "Cannot find specified tomita binary file: '%s'" %
-        self.get_tomita_path())
+    self.tomita_path = self.config['TOMITA']['tomita_path']
+    if not self.tomita_path:
+      self.tomita_path = "./tomitaparser"
+      if isfile(self.tomita_path):
+        return
+      else:
+        self.tomita_path = "/usr/bin/tomitaparser"
+        if not isfile(self.tomita_path):
+          raise FileNotFoundError(
+            "Cannot find specified tomita binary file: '%s'" %
+            self.tomita_path)
     
   def check_parse_dir(self):
     """Checks directory which contain documents to parse"""
@@ -80,7 +87,7 @@ class Configer(object):
     
   def get_tomita_path(self):
     """Returns path to tomitaparser executable"""
-    return self.config['TOMITA']['tomita_path']
+    return self.tomita_path
     
   
   
