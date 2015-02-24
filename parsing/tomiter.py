@@ -18,7 +18,7 @@ from os import remove, listdir
 from os.path import isfile, isdir, abspath
 
 from config.configer import Configer
-from .tomitaparser import TomitaParser
+from parsing.tomitaparser import TomitaParser
 
 LOCK = threading.RLock()
 
@@ -108,7 +108,7 @@ class Tomiter(object):
       dir_path = self.config.get_parse_dir()
     
       for file_path in listdir(dir_path):
-        if file_path.endswith(".txt"):
+        if file_path.endswith("3.txt"):
           self.queue.put(dir_path + "/" + file_path)
     except FileNotFoundError:
       raise

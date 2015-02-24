@@ -3,7 +3,9 @@ import "articles_base.proto";
 
 message month : TAuxDicArticle {}
 message earth : TAuxDicArticle {}
-message some_fact : TAuxDicArticle {}
+message planet : TAuxDicArticle {}
+message adj_fact : TAuxDicArticle {}
+message noun_fact : TAuxDicArticle {}
 message space_human : TAuxDicArticle {}
 message space_object : TAuxDicArticle {}
 message intellectual_discovery : TAuxDicArticle {}
